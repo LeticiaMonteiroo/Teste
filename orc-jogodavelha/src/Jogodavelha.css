@@ -1,4 +1,8 @@
+:root{
 
+  --O-color: rgba(0, 0, 0, 0.123);
+  --X-color: rgba(0, 0, 255, 0.164);
+}
 * {
     margin: 0;
     padding: 0;
@@ -43,3 +47,21 @@
     cursor: pointer;
   }
   
+  .cell.O{
+   
+    background-color: var(--O-color);
+  }
+
+  .cell.X{
+    
+    background-color: var(--X-color);
+  }
+
+  .cell.O .cellX{
+   
+    cursor: not-allowed;
+  }
+
+  .cell:not(.O):not(.X):hover{
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.164), 0 10px 10px -5px rgba(0, 0, 0, 0.116);
+  }
